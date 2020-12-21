@@ -1,0 +1,97 @@
+button {
+  font-size: 1.2rem;
+  margin: 0.5rem 0.5rem;
+}
+
+.card {
+  font-size: 1.2rem;
+  padding: 0.5rem 0.5rem;
+}
+.two-cols {
+  column-gap: 0rem;
+}
+.two-cols div {
+  margin: 0.5rem 0.2rem;
+}
+
+.cost-header {
+  font-size: 1.2rem;
+}
+
+.stake-header, .doom-header, .delay-header {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+.stake-header {
+  color: var(--med-green);
+}
+.doom-header {
+  color: var(--pink);
+}
+
+.xmon-logo {
+  position: absolute;
+  margin-left: -3.75rem;
+  margin-top: -1rem;
+}
+
+#add-btn, #remove-btn {
+  color: var(--med-green);
+  background-color: var(--black);
+}
+#add-btn:hover{
+  color: white;
+  background-color: var(--dark-green);
+}
+#remove-btn:hover {
+  color: white;
+  background-color: var(--red);
+}
+
+.form {
+  background-color : var(--black) !important; 
+  color: white !important;
+  font-size: 1.2rem;
+  outline: none;
+  border: 2px solid var(--gray);
+  padding: 0.5rem 0.2rem;
+}
+.form-holder {
+  margin: 0.1rem 0.1rem !important;
+}
+
+.xmon-ticker, .doom-ticker {
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+.xmon-ticker {
+  color: var(--med-green);
+}
+.doom-ticker {
+  color: var(--pink);
+}
+
+.doom-btn {
+  margin-top: 3.2rem;
+  color: var(--pink);
+  background-color: var(--black);
+}
+.doom-btn:hover {
+  color: var(--dark-pink);
+  background-color: var(--dark-gray);
+}
+
+.delay-header {
+  padding-top: 0.5rem;
+}
+
+.card-text {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .stake-header, .doom-header {
+    padding-top: 1rem;
+  }
+}

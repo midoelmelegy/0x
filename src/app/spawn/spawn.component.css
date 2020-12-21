@@ -1,0 +1,37 @@
+.mon-select {
+  border: 2px solid var(--gray);
+  background-color: var(--black);
+  color: var(--light-gray);
+  font-size: 1.3rem;
+  width: 80%;
+  max-width: 15rem;
+  padding: 0.1rem 0.1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.mon-1 {
+  color: var(--med-green);
+}
+.mon-2 {
+  color: var(--pink);
+}
+.mon-name {
+  color: white;
+}
+
+.xmon-ticker {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  color: var(--med-green);
+}
+
+.spawn-button {
+  margin-bottom: 1rem;
+}
+.spawn-button:hover {
+  animation: colorFlash 2s linear infinite;
+}
+
+img {
+  margin: 1rem 1rem;
+}

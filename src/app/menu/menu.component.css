@@ -1,0 +1,53 @@
+.menu-holder {
+  position: absolute;
+  left: 2rem;
+  top: 1.75rem;
+}
+
+.menu-button:hover {
+  animation: colorFlash 2s linear infinite;
+}
+
+.close-button {
+  border: none;
+  animation: none;
+}
+
+.menu-list {
+  z-index: 99;
+  position: fixed;
+  left: 0rem;
+  top: 0rem;
+  width: 50%;
+  max-width: 20rem;
+  display: table;
+  border-collapse: collapse;
+}
+.menu-list, .close-button {
+  font-size: 1.75rem;
+  background-color: var(--black);
+} 
+
+#external-link-icon {
+  width: 1rem;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+
+.menu-item {
+  padding: 1rem 1rem;
+  border: 2px solid var(--gray);
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-holder {
+    position: unset;
+    right: unset;
+    top: unset;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}

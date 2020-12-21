@@ -1,0 +1,48 @@
+<div class="container">
+  
+  <div class="centered">
+    <div class="header"><span class="cursed-text">SPAWN</span> new life</div>
+  </div>
+
+  <div class="card">
+    <p>You can pair two 0xmons to spawn a new one. The new 0xmon will inherit some traits from both parents.</p>
+    <hr>
+    <p><span>Current block: <b>{{blockNumber}}</b></span></p>
+    <p><b>{{numMons}}/{{maxMons}} 0xmons spawned</b></p>
+  </div>
+
+  <div class="two-cols">
+    <div class="card">
+      <div class="card-title mon-1">Monster 1: <span class="mon-name">{{getName(monLeft)}}</span></div>
+      <hr>
+      <div><img src="{{getImg(monLeft)}}"></div>
+      <div>Unlocks at block: {{getUnlockBlock(monLeft)}}</div>
+      <select class="mon-select" [(ngModel)]="monLeft">
+        <option value="" disabled selected>Select monster</option>
+        <option *ngFor="let n of monList" value="{{n.id}}">
+          {{n.name}}
+        </option>
+      </select>
+    </div>
+    <div class="card">
+      <div class="card-title mon-2">Monster 2: <span class="mon-name">{{getName(monRight)}}</span></div>
+      <hr>
+      <div><img src="{{getImg(monRight)}}"></div>
+      <div>Unlocks at block: {{getUnlockBlock(monRight)}}</div>
+      <select class="mon-select" [(ngModel)]="monRight">
+        <option value="" disabled selected>Select monster</option>
+        <option *ngFor="let n of monList" value="{{n.id}}">
+          {{n.name}}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="card">
+    <div>
+      <p><span>Spawn fee: </span> {{spawnFee}} <span class="xmon-ticker">XMON</span></p>
+      <p><span>Balance: </span> {{xmonBalance}} <span class="xmon-ticker">XMON</span></p>
+    </div>
+    <button class="spawn-button" (click)="spawnNewMon()">Spawn</button>
+  </div>
+</div>

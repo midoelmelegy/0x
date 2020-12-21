@@ -1,0 +1,57 @@
+#logo {
+  margin-top: 1rem;
+  width: 10rem;
+  height: auto;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-anchor {
+  text-decoration: none;
+}
+
+.wallet-holder {
+  position: absolute;
+  right: 2rem;
+  top: 1.75rem;
+}
+.wallet-button {
+  font-size: 1.2rem;
+}
+.wallet-button:hover {
+  animation: colorFlash 2s linear infinite;
+}
+
+.navbar {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar a {
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  background-color: var(--dark-gray);
+}
+.navbar a:hover {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .wallet-holder {
+    position: unset;
+    right: unset;
+    top: unset;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}

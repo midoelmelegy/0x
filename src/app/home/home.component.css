@@ -1,0 +1,50 @@
+.header {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.card {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border: none;
+}
+
+.no-font {
+  font-family: unset;
+}
+
+.text-card {
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+}
+
+.mon-card {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.1rem 0.1rem;
+}
+
+.mon-img {
+  width: 128px;
+  height: 128px;
+  margin: 0;
+}
+
+.centered {
+  text-align: center;
+}
+
+.text {
+ line-height: 1.5;
+}
+
+.display-mon {
+  border: 1px solid var(--light-gray);
+  padding: 0.5rem 0.5rem;
+  margin: 0.75rem 0.75rem;
+}
+
+@media only screen and (max-width: 768px) {
+}

@@ -1,0 +1,45 @@
+<div class="container">
+  <div>
+    <div class="centered">
+      <div class="header"><span class="cursed-text">Evoke</span> One from the beyond</div>
+    </div>
+    <div class="mons-left">Monsters left: {{monsLeft}}</div>
+    <div class="two-cols">
+      <div class="card">
+        <div class="card-title">Redeem Gems</div>
+        <hr>
+        <div class="reminder">(Gems are a staking reward from <a href="https://yflambda.finance/">yfLambda</a>.)
+          <div>Min Stake Amount: {{minStakeAmt.toFormat()}}</div>
+          <div>Min Stake Duration: {{minStakeTime}}</div>
+        </div>
+        <div class="gem-holder" *ngFor="let g of gemsList">
+          <div class="gem-item two-cols">
+            <div>
+              <div title="The unique ID of your βetagem.">ID: <a href="https://etherscan.io/token/0xc5802bcf619301bdc6b1b9eda4b6fd26e63339af?a={{g.id}}" class="unstyled-link"><span class="gem-stat">{{g.id}}</span></a></div>
+              <div title="The amount of yfβ staked to create this βetagem.">Amount: <span class="gem-stat">{{g.amount.toFormat()}}</span></div>
+              <div title="The amount of time the underlying yfβ was staked.">Duration: <span class="gem-stat">{{g.duration}}</span></div>
+              <div title="Whether or not the underlying yfβ is still staked.">Alive: <span class="gem-stat">{{g.isStaked}}</span></div>
+            </div>
+            <div class="centered burn-btn">
+              <button class="disabled{{!g.isBurnable}}" (click)="burnGem(g.id, g.isBurnable)">BURN GEM</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Direct Purchase</div>
+        <hr>
+        <div class="amounts">
+          <div>Current price: {{price.toFormat()}} {{tokenSymbol}}</div>
+          <div class="balance">Your balance:
+            {{tokenBalance.toFormat(6)}} {{tokenSymbol}}
+          </div>
+          <div>
+            <button class="purchase-btn" (click)="buyMon()">Purchase</button>
+          </div>
+      </div>
+      </div>
+    </div>
+    <div class="opensea-link">No monsters left? Find existing ones <a href="https://opensea.io/assets/0xmon">here</a> on OpenSea.</div>
+  </div>
+</div>

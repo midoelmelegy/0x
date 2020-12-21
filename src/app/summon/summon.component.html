@@ -1,0 +1,62 @@
+<div class="container">
+
+  <div class="centered">
+    <div class="header"><span class="cursed-text">summon</span> the ineffable</div>
+  </div>
+
+  <div class="card">
+    <p>Stake your <span class="xmon-ticker">XMON</span> tokens to earn <span class="doom-ticker">DOOM</span>.</p>
+    <p>Generate DOOM to summon a 0xmon NFT.</p>
+    <p>Adding and removing stake will automatically claim your DOOM. Summoning will automatically claim your DOOM. You can also manually claim your generated DOOM.</p>
+    <p>Note DOOM is currently <i>not</i> transferrable, and it is <i>not</i> an ERC-20 token.</p>    
+    <p>After summoning, you will incur a summon delay. You must wait until the specified unlock block to summon again. Each time you summon, the summon delay doubles, up to a maximum delay. You can pay XMON to reset your summon delay to the base delay.</p>
+    <hr>
+    <p><b>{{numMons}}/{{maxMons}} 0xmons summoned</b></p>
+  </div>
+
+  <div class="card">
+    <div class="two-cols">
+      <div>
+        <div class="stake-header">
+          <span class="xmon-logo"><img src="./assets/XMON-logo.png"></span>STAKE <b>XMON</b>
+        </div>
+        <div><span>Max stake:</span> {{maxStakeAmount.toFormat()}} <span class="xmon-ticker">XMON</span></div>
+        <div>
+          <span>Staking:</span> {{stakedXmon.toFormat()}} <span class="xmon-ticker">XMON</span>
+        </div>
+        <div>
+          <span>Available:</span> {{xmonBalance.toFormat()}} <span class="xmon-ticker">XMON</span>
+        </div>
+        <div class="form-holder">
+          <input placeholder="0.0000" class="form" [(ngModel)]="stakeAmount" name="stakeAmountInput">
+        </div>
+        <button id="add-btn" (click)="stake()">Add Stake</button>
+        <button id="remove-btn" (click)="removeStake()">Remove Stake</button>
+      </div>
+      <div>
+        <div class="doom-header">💀 GENERATE <b>DOOM</b></div>
+        <div><span>Summon Cost:</span> {{doomFee}}  <span class="doom-ticker">DOOM</span></div>
+        <div><span>Balance:</span> {{doomBalance.toFormat()}} <span class="doom-ticker">DOOM</span></div>
+        <div><span>Unclaimed:</span> {{pendingDoomBalance.toFormat()}} <span class="doom-ticker">DOOM</span></div>
+        <button class="doom-btn" (click)="claimDoom()">Claim DOOM</button>
+        <button class="doom-btn" (click)="claimMon()">SUMMON 0xmon</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="delay-stats card">
+    <div class="delay-header">
+      📋 DELAY STATS
+    </div>
+    <div class="card-text">
+      <div>Current block: <b>{{blockNumber}}</b> </div>
+      <div>Unlock block: <b>{{unlockBlock}}</b> </div>
+      <div>Base delay: <b>{{baseDelay}}</b> blocks</div>
+      <div>Max delay: <b>{{maxDelay}}</b> blocks</div>
+      <div>Current delay: <b>{{currentDelay}}</b> blocks</div>
+      <div>Reset fee: <b>{{resetFee}}</b> <span class="xmon-ticker">XMON</span></div>
+    </div>
+    <button (click)="resetDelay()">Reset Delay</button>
+  </div>
+
+</div>

@@ -1,0 +1,19 @@
+<app-menu>
+</app-menu>
+
+<div class="logo-wrapper">
+  <a routerLink="/" routerLinkActive="active">
+    <img src="./assets/0xmons-logo-med.png" id="logo">
+  </a>
+</div>
+
+<div class="wallet-holder">
+  <button type="button" class="wallet-button" (click)="connectWallet()">
+    <div *ngIf="wallet.connected">
+      {{wallet.userAddress.substring(0, 14)}}
+    </div>
+    <div *ngIf="!wallet.connected">
+      🏦 CONNECT WALLET
+    </div>
+  </button>
+</div>

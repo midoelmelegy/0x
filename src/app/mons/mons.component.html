@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="centered">
+    <div class="header"><span class="cursed-text">Revel</span> at your patrons</div>
+    <div class="disclaimer">Note: it may take up to 24 hrs to see your new monster's image for now. We are working on optimizations behind the scenes to create your monster faster!</div>
+    <div *ngIf="monsList.length === 0">No monsters yet!</div>
+  </div>
+  <div class="card-holder" >
+    <div *ngFor="let m of monsList">
+      <div class="mon-card">
+        <div class="mon-name">{{m.name}}</div>
+        <hr>
+        <div><a href="https://opensea.io/assets/0xAf488234796CA27DBa8ECF17f803Ea1f4Ab33E15/{{m.id}}" title="View your monster on OpenSea"><img src="{{m.img}}"></a></div>
+        <hr>
+        <div>ID: {{m.id}}</div>
+        <div>Series: {{m.series}}</div>
+        <div>Parent 1: <a href="https://opensea.io/assets/0xAf488234796CA27DBa8ECF17f803Ea1f4Ab33E15/{{m.parent1}}">{{m.parent1}}</a></div>
+        <div>Parent 2: <a href="https://opensea.io/assets/0xAf488234796CA27DBa8ECF17f803Ea1f4Ab33E15/{{m.parent2}}">{{m.parent2}}</a></div>
+        <div title="Block number where you can use this monster to merge again">Unlock: {{m.unlockBlock}}</div>
+      </div>
+    </div>
+  </div>
+</div>

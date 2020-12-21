@@ -1,0 +1,71 @@
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mons-left {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1rem 1rem;
+  border: 1px solid var(--green);
+}
+.opensea-link {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.reminder {
+  margin-bottom: 1.5rem;
+  line-height: 150%;
+}
+
+.gem-holder {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0.75rem;
+}
+
+.gem-item {
+  margin-top: 0.5rem;
+  background-color: var(--black);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.burn-btn button, .purchase-btn {
+  font-family: Courier, monospace;
+  background-color: var(--dark-green);
+  color: white;
+  border-radius: 2px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.burn-btn button:hover, .purchase-btn:hover {
+  background-color: var(--solid-green);
+}
+
+.amounts {
+  font-size: 1.25rem;
+}
+.amounts div {
+  margin-top: 0.5rem;
+}
+.purchase-btn {
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+.balance {
+  font-size: 1rem;
+  color: var(--green);
+}
+
+@media only screen and (max-width: 768px) {
+  .card-title {
+    padding-top: 1rem;
+  }
+}
